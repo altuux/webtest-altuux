@@ -5,7 +5,7 @@
   align-items: center;
   background: #111;
   padding: 10px 20px;
-  border-bottom: 3px solid #0f0;
+  border-bottom: 3px solid rgba(4, 205, 103);
 }
 
 .navbar .logo img {
@@ -34,7 +34,7 @@
 /* === UNITY CONTAINER === */
 body {
   margin: 0;
-  background-color: rgb(0, 255, 101);
+  background-color: rgba(4, 205, 103);
   font-family: sans-serif;
 }
 
@@ -42,8 +42,8 @@ body {
   border: 40px solid #fff;
   background-color: #fff;
   border-radius: 20px;
-  margin: 60px;
   overflow: hidden;
+  margin-top: 60px;
 }
 
 /* === RESPONSIVE === */
