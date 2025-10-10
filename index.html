@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Krudý Crystal KidZ přináší nové album a další chaos.">
+  <meta name="description" content="Krudý Crystal KidZ přináší nové album a další píčoviny.">
   <title>Crystal KidZ | Home</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="style.css">
@@ -11,7 +11,7 @@
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="logo">
+      <img src="logo.png" alt="Crystal KidZ">
     </div>
     <div class="nav-links">
       <a href="#">Home</a>
@@ -19,10 +19,11 @@
     </div>
   </div>
 
-  <!-- LANDING OBSAH -->
   <section class="landing">
     <h1>Crystal KidZ</h1>
     <p>Nový release coming soon — 19.11.</p>
+
+    <div id="countdown" class="countdown"></div>
 
     <div class="links">
       <a href="#" class="btn"><span>Pre-save na Spotify</span></a>
@@ -30,6 +31,7 @@
       <a href="#" class="btn"><span>Instagram</span></a>
     </div>
   </section>
+
 
   <!-- Zvuk na logo -->
   <script>
@@ -40,5 +42,8 @@
       zvuk.play();
     });
   </script>
+
+  <!--countdown-->
+  <script src="countdown.js"></script>
 </body>
 </html>
