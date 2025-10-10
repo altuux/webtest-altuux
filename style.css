@@ -1,3 +1,12 @@
+/* === ZÁKLAD === */
+body {
+  margin: 0;
+  background-color: rgba(4, 205, 103);
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
 /* === NAVBAR === */
 .navbar {
   display: flex;
@@ -10,7 +19,6 @@
 
 .navbar .logo img {
   height: 50px;
-  width: auto;
   cursor: pointer;
 }
 
@@ -27,17 +35,49 @@
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #0f0;
 }
 
-/* === UNITY CONTAINER === */
-body {
-  margin: 0;
-  background-color: rgba(4, 205, 103);
-  font-family: sans-serif;
+/* === LANDING === */
+.landing {
+  padding: 100px 20px;
 }
 
+.landing h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.landing p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background: #111;
+  border: 2px solid #0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #0f0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background: #0f0;
+  color: #111;
+}
+
+/* === UNITY KONTEJNER === */
 #unity-container {
   border: 40px solid #fff;
   background-color: #fff;
@@ -49,14 +89,12 @@ body {
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
     align-items: flex-start;
   }
 
   .nav-links {
-    flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   #unity-container {
