@@ -1,8 +1,18 @@
 /* === ZÁKLAD === */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:wght@400;600;800&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   margin: 0;
-  background-color: rgba(4, 205, 103);
-  font-family: 'Inter', sans-serif;
+  background-image:linear-gradient(to bottom, rgba(4, 205, 103), rgb(16, 99, 15));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   text-align: center;
 }
@@ -14,7 +24,7 @@ body {
   align-items: center;
   background: #111;
   padding: 10px 20px;
-  border-bottom: 3px solid rgba(4, 205, 103);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .logo img {
@@ -25,29 +35,47 @@ body {
 .nav-links {
   display: flex;
   gap: 20px;
+  text-transform: uppercase;
 }
 
 .nav-links a {
+  position: relative;
   color: #fff;
   text-decoration: none;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: rgba(4, 205, 103, 1);
+  transition: width 0.3s ease-in-out;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #0f0;
+  color: rgba(4, 205, 103, 1);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
 /* === LANDING === */
 .landing {
-  padding: 100px 20px;
+  padding: 80px 20px;
 }
 
 .landing h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 4rem;
+  margin-bottom: 30px;
 }
 
 .landing p {
@@ -63,18 +91,69 @@ body {
 }
 
 .btn {
-  background: #111;
-  border: 2px solid #0f0;
+  position: relative;
+  display: inline-block;
+  background: #00760e;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
-  color: #0f0;
-  transition: background 0.3s ease, color 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+  overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  z-index: 0;
 }
 
 .btn:hover {
-  background: #0f0;
-  color: #111;
+  background: rgb(62, 97, 62);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.05);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(4, 205, 103, 1),
+    rgba(0, 118, 14, 1),
+    rgba(4, 205, 103, 1)
+  );
+  background-size: 300% 300%;
+  z-index: 1; 
+  animation: borderPulse 6s linear infinite;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 6px;
+  background: #00760e9f;
+  z-index: 2;
+}
+
+.btn span,
+.btn {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes borderPulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* === UNITY KONTEJNER === */
